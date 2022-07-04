@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.min.js'
 import { InputField } from './components/InputField';
-import { Todo } from './models/todo';
+import { Todo } from './interfaces/todo';
 import { nanoid } from 'nanoid';
 
 const App: React.FC = ()=> {
