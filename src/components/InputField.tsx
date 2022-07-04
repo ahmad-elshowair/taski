@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 interface Props {
   todo: string;
@@ -7,10 +7,20 @@ interface Props {
 }
 
 export  const InputField: React.FC<Props> = ({todo, setTodo, add}) =>{
+ const inputRef = useRef<HTMLInputElement>(null);
   return(
       <section className="input-section"> 
         <div className="container">
-          <form className="row mb-5" onSubmit={add}>
+          <form 
+            className="row mb-3" 
+            onSubmit=
+              {
+                (event)=>{
+                  add(event);
+                  inputRef.current?.blur();
+                }
+              }
+          >
             <input 
               type="text" 
               id='search' 
@@ -20,7 +30,7 @@ export  const InputField: React.FC<Props> = ({todo, setTodo, add}) =>{
               value={todo}
               onChange={(event) => setTodo(event.target.value)}
             />
-            <button className="btn btn-primary text-uppercase">add</button>
+            <button className="btn btn-primary text-uppercase" type="submit">add</button>
           </form>
         </div>
       </section>

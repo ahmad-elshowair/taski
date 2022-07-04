@@ -5,11 +5,14 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import { InputField } from './components/InputField';
 import { Todo } from './interfaces/todo';
 import { nanoid } from 'nanoid';
+import { TaskiList } from './components/TaskiList';
 
 const App: React.FC = ()=> {
   const [todo, setTodo] = React.useState<string>("");
   const [todos, setTodos] = React.useState<Todo[]>([]);
 
+
+  // add the new task to todo list
   const add = (event: React.FormEvent)=>{
     event.preventDefault();
     if(todo){
@@ -23,11 +26,12 @@ const App: React.FC = ()=> {
           }
         ];
       });
+      setTodo("");
     }
   }
-  console.log(todos);
+
   return (
-    <div className="app bg-info">
+    <main className="app bg-info pt-5">
       <header className='header'>
         <h1 className="heading text-uppercase">Taski</h1>
       </header>
@@ -36,7 +40,11 @@ const App: React.FC = ()=> {
         setTodo={setTodo}
         add={add}
       />
-    </div>
+      <TaskiList
+        todos={todos}
+        setTodos={setTodos}
+      />
+    </main>
   );
 }
 
