@@ -1,7 +1,7 @@
 /* import the font from google */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;1,700&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,7 +9,7 @@
   font-weight: 600;
 }
 
-.app{
+.app {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -17,10 +17,11 @@
   align-items: center;
 }
 
-.header{
+.header {
   z-index: 1;
 }
-.heading{
+
+.heading {
   font-size: 45px;
   font-weight: 700;
   color: #fff;
@@ -28,14 +29,15 @@
 
 /* +++++++++++++++++++ START STYLE INPUT FIELD SECTION +++++++++++++++++++ */
 
- .input-section{
+.input-section {
   width: 100%;
- }
-form.row{
+}
+
+form.row {
   position: relative;
 }
 
- .input-section .form-control-lg{
+.input-section .form-control-lg {
   border-radius: 20px;
   font-size: 18px;
   font-weight: 700;
@@ -44,14 +46,14 @@ form.row{
   outline: none;
   box-shadow: inset 0 0 5px #000;
   transition: .2s;
- }
+}
 
- .input-section .form-control-lg:focus{
+.input-section .form-control-lg:focus {
   outline: none;
   box-shadow: 0 0 20px 1000px #00000075;
- }
+}
 
- .input-section .btn{
+.input-section .btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,50 +69,91 @@ form.row{
   transition: .2s;
   box-shadow: 0 0 15px #000;
 }
-.input-section .btn:focus,
-.input-section .btn:active{
+
+.input-section .btn:active {
   transform: scale(.8) translateY(15px);
   box-shadow: 0 0 7.5px #000;
   font-size: 13px;
 }
+
 /* +++++++++++++++++++ END STYLE INPUT FIELD SECTION +++++++++++++++++++ */
 
 /* +++++++++++++++++++ START STYLE TASKI LIST SECTION +++++++++++++++++++ */
 
-.taski-list-section{
+.taski-list-section {
   width: 100%;
 }
-.list-header{
-  background-image: url(https://img.freepik.com/free-vector/pink-fabric-texture-background-design-element_548373-1706.jpg?w=740);
-  padding: 15px;
-  border-radius: 15px;
+
+.lists {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
-.list-heading{
+
+.tasks {
+  padding: 5px;
+  background-color: #c37fcd;
+  border-radius: 10px;
+  height: fit-content;
+  width: 47.5%;
+}
+
+.completed-list {
+  background-color: #c0d641;
+}
+
+.list-header {
+  padding: 15px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.list-heading {
   margin: 0;
 }
-.single-task{
+
+.single-task {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: url(https://img.freepik.com/free-photo/abstract-gold-satin-silky-cloth-fabric-textile-drape-with-crease-wavy-folds-background_620624-574.jpg?size=626&ext=jpg&ga=GA1.2.225029581.1656948679);
+  background-image: url(https://dharma-www.s3.amazonaws.com/images/eng/products/fullsize/cfab/CHS8-22.jpg);
   background-size: cover;
   padding: 10px;
   border-radius: 10px;
-
+  transition: .5s;
+  cursor: pointer;
 }
 
-.task-actions{
+.single-task:hover {
+  box-shadow: 0px 0px 10px 0px #443030;
+  transform: scale(1.01);
+}
+
+input.edit-task-input {
+  height: 30px;
+  font-weight: 700;
+}
+
+input.edit-task-input:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.task-actions {
   display: flex;
   width: 30%;
   justify-content: space-around;
 }
-.icon{
+
+.icon {
   font-size: 20px;
   cursor: pointer;
   opacity: .6;
   transition: .5s;
 }
-.icon:hover{
+
+.icon:hover {
   opacity: 1;
 }
+
 /* +++++++++++++++++++ END STYLE TASKI LIST SECTION +++++++++++++++++++ */

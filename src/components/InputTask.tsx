@@ -6,8 +6,10 @@ interface Props {
   add: (event: React.FormEvent) => void
 }
 
-export  const InputField: React.FC<Props> = ({todo, setTodo, add}) =>{
+export  const InputTask: React.FC<Props> = ({todo, setTodo, add}) =>{
+
  const inputRef = useRef<HTMLInputElement>(null);
+ 
   return(
       <section className="input-section"> 
         <div className="container">
