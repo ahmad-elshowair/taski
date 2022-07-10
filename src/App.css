@@ -92,14 +92,14 @@ form.row {
 
 .tasks {
   padding: 5px;
-  background-color: #c37fcd;
+  background-color: #300860;
   border-radius: 10px;
   height: fit-content;
   width: 47.5%;
 }
 
-.completed-list {
-  background-color: #c0d641;
+.completed {
+  background-color: #07ad68;
 }
 
 .list-header {
