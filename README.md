@@ -1,4 +1,4 @@
-#Taski App
+# Taski App
 
 
 _a react app with ability to drag and drop tasks to other droppable box_
