@@ -34,27 +34,36 @@ const App: React.FC = ()=> {
 
   const onDragEnd=(result: DropResult)=>{
     const {source, destination} = result;
+
+    // if there is no destination return nothing
     if(!destination)return;
 
+    // if destination and source are the same return noting
     if(destination.droppableId === source.droppableId && destination.index === source.index) return;
 
     let add;
-    let active = todos;
-    let completed = completedTasks;
+    let active = todos;  // active tasks
+    let completed = completedTasks; // completed tasks
+
+    // if the source is equal to 'process'  remove the specific task  
     if(source.droppableId=== "process"){
-      add = active[source.index];
-      active.splice(source.index, 1)
+      add = active[source.index]; // determine the task
+      active.splice(source.index, 1) // remove it from the active tasks
     }else{
       add = completed[source.index];
-      completed.splice(source.index, 1)
+      completed.splice(source.index, 1) // remove it from the completed tasks
     }
 
+    // if destination is equal 'process' add the task to process tasks
     if(destination.droppableId==="process"){
       active.splice(destination.index, 0, add)
     }else{
+      // add the task to the completed tasks
       completed.splice(destination.index, 0, add);
     }
-  }
+  };
+
+
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <main className="app bg-info pt-5">
