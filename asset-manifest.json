@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/taski/static/css/main.e10e0ed7.css",
+    "main.js": "/taski/static/js/main.04866c9a.js",
+    "index.html": "/taski/index.html",
+    "main.e10e0ed7.css.map": "/taski/static/css/main.e10e0ed7.css.map",
+    "main.04866c9a.js.map": "/taski/static/js/main.04866c9a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e10e0ed7.css",
+    "static/js/main.04866c9a.js"
+  ]
+}
